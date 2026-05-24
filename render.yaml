@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: digistore-africa
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: NODE_ENV
+        value: production
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      - key: EMAIL_FROM_NAME
+        value: DigiStore Africa
+      - key: CINETPAY_APIKEY
+        sync: false
+      - key: CINETPAY_SITE_ID
+        sync: false
+      - key: SITE_URL
+        sync: false
+      - key: WEBHOOK_SECRET
+        sync: false
